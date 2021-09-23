@@ -43,7 +43,7 @@ static void	ft_fillwords(char const *s, char c, char **str)
 				i++;
 				letter++;
 			}
-			str[letter++] = ft_calloc(len + 1, sizeof(char));
+			str[letter++] = ft_calloc(letter + 1, sizeof(char));
 			ft_strlcpy(str[letter], &s[i - letter], letter + 1);
 		}
 	}
