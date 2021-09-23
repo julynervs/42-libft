@@ -32,19 +32,20 @@ static void	ft_fillwords(char const *s, char c, char **str)
 	size_t	letter;
 
 	i = 0;
-	letter = 0;
+	n = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
 			i++;
 		else
 		{
+			letter = 0;
 			while (s[i] != c && s[i] != '\0')
 			{
 				i++;
 				letter++;
 			}
-			str[letter++] = ft_calloc(letter + 1, sizeof(char));
+			str[n++] = ft_calloc(letter + 1, sizeof(char));
 			ft_strlcpy(str[letter], &s[i - letter], letter + 1);
 		}
 	}
