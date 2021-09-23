@@ -19,8 +19,10 @@ char	**ft_split(char const *s, char c)
 {
 	char	**str;
 
+	if (!s)
+		return (0);
 	str = calloc(ft_countwords(s, c) + 1, sizeof(char *));
-	if (!s || !str)
+	if (!str)
 		return (0);
 	ft_fillwords(s, c, str);
 	return (str);
@@ -29,25 +31,24 @@ char	**ft_split(char const *s, char c)
 static void	ft_fillwords(char const *s, char c, char **str)
 {
 	size_t	i;
-	size_t	letter;
-	size_t	n;
+	size_t	len_word;
+	char	*start;
 
 	i = 0;
-	n = -1;
+	start = (char *)s;
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
 			i++;
 		else
 		{
-			letter = 0;
+			len_word = 0;
 			while (s[i] != c && s[i] != '\0')
 			{
 				i++;
-				letter++;
+				len_word++;
 			}
-			str[++n] = ft_calloc(letter + 1, sizeof(char));
-			str[n] = ft_strdup(&s[i - letter]);
+			str[i] = ft_substr(s, start, len_word);
 		}
 	}
 }
