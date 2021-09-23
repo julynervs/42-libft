@@ -14,13 +14,6 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t len)
 {
-	/*if (ft_memcmp(s1, s2, len) < 0)
-		return (-1);
-	else if (ft_memcmp(s1, s2, len) > 0)
-		return (1);
-	else
-		return (0);*/
-
 	unsigned char	*str1;
 	unsigned char	*str2;
 
