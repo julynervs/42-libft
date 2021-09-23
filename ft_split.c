@@ -28,33 +28,6 @@ char	**ft_split(char const *s, char c)
 	return (str);
 }
 
-static void	ft_fillwords(char const *s, char c, size_t n_words, char **str)
-{
-	char	*start;
-	size_t	n;
-	size_t	len_word;
-
-	n = 0;
-	start = (char *)s;
-	while (n < n_words)
-	{
-		if (*start == c)
-			start++;
-		else
-		{
-			len_word = 0;
-			while (*start != c && *start != '\0')
-			{
-				start++;
-				len_word++;
-			}
-			str[n] = ft_substr(start, 0, len_word);
-			start =+ len_word;
-			n++;
-		}
-	}
-}
-
 static size_t	ft_countwords(char const *s, char c)
 {
 	size_t	i;
@@ -76,4 +49,31 @@ static size_t	ft_countwords(char const *s, char c)
 		}
 	}
 	return (n_words);
+}
+
+static void	ft_fillwords(char const *s, char c, size_t n_words, char **str)
+{
+	char	*start;
+	size_t	n;
+	size_t	len_word;
+
+	n = 0;
+	start = (char *)s;
+	while (n < n_words)
+	{
+		if (*start == c)
+			start++;
+		else
+		{
+			len_word = 0;
+			while (*start != c && *start != '\0')
+			{
+				start++;
+				len_word++;
+			}
+			str[n] = ft_substr(start, 0, len_word);
+			start += len_word;
+			n++;
+		}
+	}
 }
