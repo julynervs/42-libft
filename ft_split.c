@@ -47,7 +47,7 @@ static void	ft_fillwords(char const *s, char c, char **str)
 				letter++;
 			}
 			str[++n] = ft_calloc(letter + 1, sizeof(char));
-			str[letter] = ft_strdup(&s[i - letter]);
+			str[n] = ft_strdup(&s[i - letter]);
 		}
 	}
 }
