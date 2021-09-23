@@ -33,7 +33,7 @@ static void	ft_fillwords(char const *s, char c, char **str)
 	size_t	n;
 
 	i = 0;
-	n = 0;
+	n = -1;
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
@@ -46,7 +46,7 @@ static void	ft_fillwords(char const *s, char c, char **str)
 				i++;
 				letter++;
 			}
-			str[n++] = ft_calloc(letter + 1, sizeof(char));
+			str[++n] = ft_calloc(letter + 1, sizeof(char));
 			ft_strlcpy(str[letter], &s[i - letter], letter + 1);
 		}
 	}
@@ -68,8 +68,8 @@ static size_t	ft_countwords(char const *s, char c)
 			while (s[i] != c && s[i] != '\0')
 			{
 				i++;
-				n_words++;
 			}
+			n_words++;
 		}
 	}
 	return (n_words);
