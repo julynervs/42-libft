@@ -28,27 +28,29 @@ char	**ft_split(char const *s, char c)
 	return (str);
 }
 
-static void	ft_fillwords(char const *s, char c, char **str)
+static void	ft_fillwords(char const *s, char c, size_t n_words, char **str)
 {
-	size_t	i;
-	size_t	len_word;
 	char	*start;
+	size_t	n;
+	size_t	len_word;
 
-	i = 0;
+	n = 0;
 	start = (char *)s;
-	while (s[i] != '\0')
+	while (n < n_words)
 	{
-		if (s[i] == c)
-			i++;
+		if (*start == c)
+			start++;
 		else
 		{
 			len_word = 0;
-			while (s[i] != c && s[i] != '\0')
+			while (*start != c && *start != '\0')
 			{
-				i++;
+				start++;
 				len_word++;
 			}
-			str[i] = ft_substr(start, 0, len_word);
+			str[n] = ft_substr(start, 0, len_word);
+			start =+ len_word;
+			n++;
 		}
 	}
 }
