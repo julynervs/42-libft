@@ -48,7 +48,7 @@ static void	ft_fillwords(char const *s, char c, char **str)
 				i++;
 				len_word++;
 			}
-			str[i] = ft_substr(s, start, len_word);
+			str[i] = ft_substr(start, 0, len_word);
 		}
 	}
 }
