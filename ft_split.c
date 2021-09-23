@@ -30,6 +30,7 @@ static void	ft_fillwords(char const *s, char c, char **str)
 {
 	size_t	i;
 	size_t	letter;
+	size_t	n;
 
 	i = 0;
 	n = 0;
