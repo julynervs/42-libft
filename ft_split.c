@@ -24,7 +24,7 @@ char	**ft_split(char const *s, char c)
 	str = calloc(ft_countwords(s, c) + 1, sizeof(char *));
 	if (!str)
 		return (0);
-	ft_fillwords(s, c, str);
+	ft_fillwords(s, c, ft_countwords(s, c), str);
 	return (str);
 }
 
