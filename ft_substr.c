@@ -20,6 +20,8 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
+	if (!str)
+		return (NULL);
 	substr = (char *)malloc(sizeof(*str) * (len + 1));
 	if (!substr)
 		return (NULL);
