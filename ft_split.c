@@ -19,7 +19,6 @@ char	**ft_split(char const *s, char c)
 {
 	char	**str;
 	size_t	n_words;
-	size_t	len_word;
 
 	if (!s)
 		return (0);
@@ -57,6 +56,7 @@ static void	ft_fillwords(size_t n_words, char **str, char c)
 {
 	size_t	n;
 	char	*start;
+	size_t	len_word;
 
 	n = 0;
 	start = (char *)str;
