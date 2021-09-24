@@ -58,13 +58,14 @@ static void	ft_fillwords(size_t n_words, char **str, char c, size_t len_word)
 	size_t	len_word;
 
 	n = 0;
-	start = (char *)s;
+	start = (char *)str;
 	while (n < n_words)
 	{
 		if (*start == c && *start != '\0')
 			start++;
 		else
 		{
+			len_word = 0;
 			while (*start != c && *start != '\0')
 			{
 				start++;
