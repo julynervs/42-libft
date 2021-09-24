@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static void	ft_fillwords(char const *s, char c, size_t n_words, char **str);
+static void	ft_fillwords(size_t n_words, char **str, char c, size_t len_word);
 static size_t	ft_countwords(char const *s, char c);
 
 char	**ft_split(char const *s, char c)
