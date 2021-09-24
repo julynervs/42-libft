@@ -18,6 +18,8 @@ static size_t	ft_countwords(char const *s, char c);
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
+	size_t	n_words;
+	size_t	len_word;
 
 	if (!s)
 		return (0);
