@@ -6,7 +6,7 @@
 /*   By: jurobert <jurobert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 20:08:10 by jurobert          #+#    #+#             */
-/*   Updated: 2021/09/02 22:20:59 by jurobert         ###   ########.fr       */
+/*   Updated: 2021/09/26 20:56:49 by jurobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *nptr)
 {
 	size_t	num;
-	int		sign;
+	unsigned int		sign;
 
 	sign = 1;
 	while (*nptr == 32 || (*nptr >= 9 && *nptr <= 15))
