@@ -6,7 +6,7 @@
 /*   By: jurobert <jurobert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 18:07:55 by jurobert          #+#    #+#             */
-/*   Updated: 2021/09/26 20:14:01 by jurobert         ###   ########.fr       */
+/*   Updated: 2021/09/26 20:27:06 by jurobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
+void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 
 #endif
