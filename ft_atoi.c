@@ -6,7 +6,7 @@
 /*   By: jurobert <jurobert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 20:08:10 by jurobert          #+#    #+#             */
-/*   Updated: 2021/09/26 21:00:26 by jurobert         ###   ########.fr       */
+/*   Updated: 2021/09/26 21:01:03 by jurobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *nptr)
 {
-	unsigned int	num;
+	unsigned long int	num;
 	int		sign;
 
 	sign = 1;
