@@ -6,7 +6,7 @@
 /*   By: jurobert <jurobert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 17:33:19 by jurobert          #+#    #+#             */
-/*   Updated: 2021/10/05 12:17:38 by jurobert         ###   ########.fr       */
+/*   Updated: 2021/10/05 12:20:14 by jurobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 		substr = ft_calloc(len + 1, sizeof(char));
 		if (!substr)
 			return (NULL);
-		else
-			ft_strlcpy(substr, str + start, len + 1);
+		ft_strlcpy(substr, (str + start), len + 1);
 		return (substr);
 	}
 	return (NULL);
