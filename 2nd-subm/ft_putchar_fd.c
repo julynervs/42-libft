@@ -14,10 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	if (fd == 0)
-		write(0, &c, 1);
-	else if (fd == 1)
-		write(1, &c, 1);
-	else if (fd == 2)
-		write(2, &c, 1);
+	write(fd, &c, 1);
 }

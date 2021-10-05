@@ -6,7 +6,7 @@
 /*   By: jurobert <jurobert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 17:53:13 by jurobert          #+#    #+#             */
-/*   Updated: 2021/08/30 21:53:25 by jurobert         ###   ########.fr       */
+/*   Updated: 2021/10/05 11:36:33 by jurobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0' && *s != c)
+	unsigned char cc = (unsigned char)c;
+	while (*s != '\0' && *s != cc)
 		s++;
-	if (*s == c || c == '\0')
+	if (*s == cc || cc == '\0')
 		return ((char *)s);
 	return (0);
 }
