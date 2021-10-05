@@ -6,7 +6,7 @@
 /*   By: jurobert <jurobert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 18:07:55 by jurobert          #+#    #+#             */
-/*   Updated: 2021/09/29 18:19:57 by jurobert         ###   ########.fr       */
+/*   Updated: 2021/10/05 17:54:05 by jurobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ int				ft_strncmp(const char *s1, const char *s2, size_t len);
 char			*ft_strnstr(const char	*big, const char *little, size_t len);
 /**/
 /* STRING MANIPULATION FUNCTIONS */
-size_t			ft_strlcpy(char *dst, const char *src, size_t size);
-size_t			ft_strlcat(char *dst, const char *src, size_t size);
+size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t			ft_strlcat(char *dst, const char *src, size_t newsize);
 char			*ft_strdup(const char *s);
 /**/
 /***************************************/
