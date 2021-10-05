@@ -6,7 +6,7 @@
 /*   By: jurobert <jurobert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 13:24:54 by jurobert          #+#    #+#             */
-/*   Updated: 2021/08/30 14:37:50 by jurobert         ###   ########.fr       */
+/*   Updated: 2021/10/05 12:25:09 by jurobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		return (len);
 	else if (len + 1 < size)
 		ft_memmove(dst, src, len + 1);
-	else if (len + 1 > size)
+	else if (len + 1 >= size)
 	{
 		ft_memmove(dst, src, size - 1);
 		dst[size - 1] = '\0';
