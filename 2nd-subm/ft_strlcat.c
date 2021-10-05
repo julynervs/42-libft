@@ -6,7 +6,7 @@
 /*   By: jurobert <jurobert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 19:19:01 by jurobert          #+#    #+#             */
-/*   Updated: 2021/08/30 17:49:19 by jurobert         ###   ########.fr       */
+/*   Updated: 2021/10/05 12:45:00 by jurobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	j;
 
-	if (size < ft_strlen(dst))
+	if (size < ft_strlen(dst) + 1)
 		return (size + ft_strlen(src));
 	i = 0;
 	while (dst[i] != '\0')
