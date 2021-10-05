@@ -6,7 +6,7 @@
 /*   By: jurobert <jurobert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 17:33:19 by jurobert          #+#    #+#             */
-/*   Updated: 2021/10/05 12:22:05 by jurobert         ###   ########.fr       */
+/*   Updated: 2021/10/05 12:22:51 by jurobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
 	char	*substr;
 	size_t	str_len;
-	size_t	sub_len
+	size_t	sub_len;
 
 	if (str)
 	{
