@@ -6,7 +6,7 @@
 /*   By: jurobert <jurobert@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 21:11:20 by jurobert          #+#    #+#             */
-/*   Updated: 2021/10/05 12:38:41 by jurobert         ###   ########.fr       */
+/*   Updated: 2021/10/06 19:32:46 by jurobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	len;
-	unsigned char cc = (unsigned char)c;
+	unsigned char	cc;
 
+	cc = (unsigned char)c;
 	len = ft_strlen(s) + 1;
 	while (len--)
 	{
